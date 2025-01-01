@@ -8,7 +8,6 @@ int main() {
 	int a1; // a1 - the fisrt term in the sequence
 	int d; // d - the common difference between terms
 	int n; // n - the number of terms in the sequence
-	//an = a1 + (n - 1) * d
 
 	std::cout << "Enter the first term in the sequence: " << std::endl;
 	std::cin >> a1;
@@ -18,7 +17,9 @@ int main() {
 	std::cin >> n;
 	std::cout << std::endl;
 
-	for (int an = a1; an <= (a1 + (n - 1) * d); an += d) {
+
+	int last_num = (a1 + (n - 1) * d)
+	for (int an = a1; an <= last_num; an += d) {
 		std::cout << an << std::endl;
 	}
 	std::cout << std::endl;
@@ -86,6 +87,16 @@ int main() {
 		}
 		std::cout << std::endl;
 	}
+
+	//triangle with numbers
+	std::cout << "Enter length: " << std::endl;
+        std::cin >> length;
+        for (int i = 0; i < length; i++) {
+	        for (int j = 0; j <= i; j++) {
+		        j % 2 == 0 ? std::cout << "1" : std::cout << "0";
+	        }
+	        std::cout << std::endl;
+        }
 
 	//Task 3.
 
