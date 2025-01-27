@@ -1,3 +1,5 @@
+#define _USE_MATH_DEFINES
+
 #include <iostream>
 #include <cmath>
 
@@ -47,20 +49,14 @@ static int factorial(int count)
 
 static float getArea(float radius)
 {
-	double pi = 2 * acos(0.0);
-	float area = pow(radius, 2) * pi;
-
-	std::cout << "The area of the circle is: " << area << std::endl;
+	float area = pow(radius, 2) * M_PI;
 
 	return area;
 }
 
 static float getCircumference(float radius)
 {
-	double pi = 2 * acos(0.0);
-	float circumference = 2 * radius * pi;
-
-	std::cout << "The circumference of the circle is: " << circumference << std::endl;
+	float circumference = 2 * radius * M_PI;
 
 	return circumference;
 }
@@ -118,8 +114,8 @@ int main()
 	std::cout << "Please enter the radius " << std::endl;
 	std::cin >> r;
 
-	getArea(r);
-	getCircumference(r);
+	std::cout << "The area of the circle is: " << getArea(r) << std::endl;
+	std::cout << "The circumference of the circle is: " << getCircumference(r) << std::endl;
 
 
 	return 0;
